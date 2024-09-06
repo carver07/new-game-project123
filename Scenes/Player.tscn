@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://4uionhb38fo1"]
+
+[ext_resource type="Texture2D" uid="uid://cjp4dfjjfkms6" path="res://Assets/Horror game player animations.png" id="1_ppi5x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n3pxw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0o23"]
+atlas = ExtResource("1_ppi5x")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqy3d"]
+atlas = ExtResource("1_ppi5x")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sltsw"]
+atlas = ExtResource("1_ppi5x")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wjuwo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0o23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqy3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sltsw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(-2, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_n3pxw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wjuwo")

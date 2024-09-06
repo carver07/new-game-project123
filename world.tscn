@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://4wijro5gl1cc"]
+
+[ext_resource type="Script" path="res://background.gd" id="1_5uevi"]
+[ext_resource type="Texture2D" uid="uid://bas0atdw0b6em" path="res://Assets/Skybox Castle outside.png" id="1_idmj0"]
+
+[node name="World" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+script = ExtResource("1_5uevi")
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+offset_left = 2.0
+offset_right = 1678.0
+offset_bottom = 240.0
+scale = Vector2(1.345, 1.345)
+texture = ExtResource("1_idmj0")
+stretch_mode = 1
